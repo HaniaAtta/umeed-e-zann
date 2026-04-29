@@ -1,0 +1,272 @@
+{
+  "@@locale": "sd",
+  "appName": "امید زن",
+  "home": "گھر",
+  "welcome": "مرحبا",
+  "welcomeUser": "مرحبا، {userName}",
+  "@welcomeUser": {
+    "placeholders": {
+      "userName": {
+        "type": "String"
+      }
+    }
+  },
+  "searchServices": "خدمات، وسائل ڳوليو...",
+  "quickAccess": "جلدي رسائي",
+  "todaysHighlights": "اڄ جا خاص ڳالھون",
+  "recentMessages": "حاليه پيغام",
+  "noMessagesYet": "اڃان تائين ڪو پيغام ناهي",
+  "startConversation": "ڪنهن سان ڳالهه شروع ڪريو",
+  "newChat": "نئون چيٽ",
+  "viewAll": "سڀ ڏسو",
+  "safetyShield": "سيڪيورٽي شيلڊ",
+  "wellnessHub": "صحت هب",
+  "growthAcademy": "ترقي اڪيڊمي",
+  "marketplace": "مارڪيٽ پليس",
+  "legalAid": "قانوني مدد",
+  "community": "ڪميونٽي",
+  "mentalSanctuary": "ذهني پناهگاه",
+  "cycleTracker": "سائيڪل ٽريڪر",
+  "maternityWing": "زچگي ونگ",
+  "teleHealth": "ٽيلي هيلٿ",
+  "familyPlanning": "خانداني منصوبابندي",
+  "howAreYouFeeling": "توهان ڪيئن محسوس ڪري رهيا آهيو؟",
+  "logSymptoms": "علامتون درج ڪريو",
+  "searchDoctors": "ڊاڪٽر ڳوليو...",
+  "cramps": "درد",
+  "headache": "سردرد",
+  "energetic": "توانا",
+  "bloating": "پھولڻ",
+  "save": "محفوظ ڪريو",
+  "cancel": "منسوخ ڪريو",
+  "delete": "حذف ڪريو",
+  "edit": "ترميم",
+  "add": "شامل ڪريو",
+  "remove": "هٽايو",
+  "submit": "جمع ڪريو",
+  "loading": "لوڊ ٿي رهيو آهي...",
+  "error": "غلطي",
+  "success": "ڪاميابي",
+  "noResultsFound": "ڪو نتيجو نه مليو",
+  "trySearching": "ڳوليو: سيڪيورٽي، صحت، ترقي، مارڪيٽ پليس، قانوني، يا ڪميونٽي",
+  "continueLearning": "سيکڻ جاري رکو",
+  "exploreNewCourses": "نوان ڪورس ۽ مهارتون دريافت ڪريو",
+  "safetyReminder": "سيڪيورٽي يادگيري",
+  "addTrustedContacts": "SOS الرٽس لاءِ قابل اعتماد رابطا شامل ڪريو",
+  "shareLocation": "هميشه قابل اعتماد رابطن سان پنهنجو مقام شيئر ڪريو",
+  "safetyTip": "سيڪيورٽي ٽپ",
+  "upcomingAppointment": "ايندڙ اپائنٽمينٽ",
+  "cycleDay": "سائيڪل جو ڏينهن {day}",
+  "@cycleDay": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "takeCare": "توهان جي پيريئڊ جو ڏينهن {day} - احتياط ڪريو!",
+  "@takeCare": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "fertileWindow": "ڏينهن {day} - زرخیز ونڊو ويجهو اچي رهيو آهي",
+  "@fertileWindow": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "cycleOnTrack": "ڏينهن {day} - توهان جو سائيڪل ٽريڪ تي آهي",
+  "@cycleOnTrack": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "today": "اڄ",
+  "tomorrow": "سڀاڻي",
+  "inDays": "{days} ڏينهنن ۾",
+  "@inDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "conversations": "{count} ڳالهه",
+  "@conversations": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "conversationsPlural": "{count} ڳالهيون",
+  "@conversationsPlural": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "language": "زبان",
+  "profile": "پروفائل",
+  "fullName": "پورو نالو",
+  "email": "اي ميل",
+  "phone": "فون",
+  "location": "جائ",
+  "notSet": "سيٽ ٿيل ناهي",
+  "profileUpdated": "پروفائل ڪاميابي سان اپ ڊيٽ ٿي ويو",
+  "profileUpdateFailed": "پروفائل اپ ڊيٽ ٿيڻ ۾ ناڪامي",
+  "imageUploaded": "پروفائل تصوير اپ ڊيٽ ٿي وئي",
+  "imageUploadFailed": "تصوير اپ لوڊ ٿيڻ ۾ ناڪامي",
+  "validEmailError": "مهرباني ڪري هڪ صحيح اي ميل ايڊريس داخل ڪريو",
+  "pickImageError": "تصوير چونਡڻ ۾ ناڪامي",
+  "safetyShieldTitle": "توهان جي حفاظتي شیلڊ",
+  "safetyShieldDesc": "توهان کي محفوظ رکڻ لاء فوري جواب جون خاصيتون",
+  "quickActions": "فوري قدم",
+  "oneTouchSos": "ون ٽچ SOS",
+  "oneTouchSosDesc": "فوري طور تي لائيو لوڪيشن، آڊيو رڪارڊنگ، ۽ امدادي پيغام موڪليو",
+  "liveTracking": "لائيو ٽريڪنگ",
+  "liveTrackingDesc": "دوستن/خاندان کي پنهنجي لائيو لوڪيشن ٽريڪ ڪرڻ جي اجازت ڏيو",
+  "shakeToAlert": "هلاءِ ڪري اطلاع ڏيو",
+  "shakeToAlertDesc": "پنهنجي فون کي هلاءِ ڪري خفيه طور SOS الرٽ موڪليو",
+  "fakeCallGenerator": "فيڪ ڪال جنريٽر",
+  "fakeCallDesc": "محفوظ طريقي سان ٻاهر نڪرڻ لاء هڪ حقيقي ايندڙ ڪال جو بھانو ڪريو",
+  "manageTrustedContacts": "بھروسيمند رابطن جو انتظام ڪريو",
+  "manageTrustedContactsDesc": "SOS الرٽس حاصل ڪندڙ رابطن کي شامل يا ختم ڪريو",
+  "documentVault": "دستاويزي والٽ",
+  "uploadDocument": "دستاويز اپ لوڊ ڪريو",
+  "secureStorageDesc": "قانوني دستاويزن لاء محفوظ اسਟوريج",
+  "yourDocuments": "توهان جا دستاويز",
+  "noDocumentsYet": "اڃا تائين ڪو به دستاويز ناهي",
+  "uploadFirstDoc": "شروع ڪرڻ لاء پنهنجو پهريون دستاਵيز اپ لوڊ ڪريو",
+  "filesCount": "{count} فائلون",
+  "@filesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "unknownDate": "نا معلوم تاريخ",
+  "uploadingDoc": "دستاويز اپ لوڊ ٿي رهيو آهي...",
+  "docUploadSuccess": "دستاويز ڪاميابي سان اپ لوڊ ٿي ويو!",
+  "docUploadFailed": "دستاويز اپ لوڊ ٿيڻ ۾ ناڪامي",
+  "loginToUpload": "دستاويزن اپ لوڊ ڪرڻ لاء مهرباني ڪري لاگ ان ٿيو",
+  "sosActivationInfo": "SOS چالو ڪرڻ سان ڇا ٿيندو؟",
+  "liveLocationShared": "توهان جي لائيو لوڪيشن شيئر ڪئي ويندي",
+  "audioRecordingStarted": "آڊيو رڪارڊنگ آپٽوميٽڪ شروع ٿيندي",
+  "helpMessageSent": "مدد جو پيغام توهان جي ڀروسيمند رابطن ۽ پوليس کي موڪليو ويندو",
+  "tapToActivateSos": "SOS چالو ڪرڻ لاء مٿي ڏنل بٽڻ تي ڪلڪ ڪريو",
+  "sosCountdownText": "SOS {count} سيڪنڊن ۾ چالو ٿيندو...",
+  "sosAlertSent": "SOS الرٽ موڪليو ويو! ڀروسيمند رابطن کي اطلاع ڏنو ويو آهي.",
+  "locationServicesDisabled": "لوڪيشن سروسز بند آهن. مهرباني ڪري لوڪيشن آن ڪريو.",
+  "locationPermissionsRequired": "SOS الرٽ لاء لوڪيشن جي اجازت لازمي آهي.",
+  "locationPermissionsDeniedForever": "لوڪيشن جي اجازت مستقل طور تي بند آهي. سيٽنگز مان آن ڪريو.",
+  "errorSendingSos": "SOS الرٽ موڪلڻ ۾ غلطي",
+  "testAlert": "ٽيسٽ الرٽ",
+  "testAlertSent": "ٽيسٽ الرٽ رابطن کي موڪليو ويو",
+  "shareLocation": "لوڪيشن شيئر ڪريو",
+  "locationShared": "لوڪيشن شيئر ڪئي وئي",
+  "searchDocs": "دستاويز ڳوليو...",
+  "searchCourses": "ڪورس ڳوليو...",
+  "allCourses": "سڀ ڪورس",
+  "noCoursesFound": "ڪو به ڪورس نه مليو",
+  "courseProgress": "ڪورس جي ترقي",
+  "videosCount": "{count} وڊيوز",
+  "courseVideos": "ڪورس وڊيوز",
+  "congratulations": "مبارڪون!",
+  "keepLearning": "سيکڻ جاري رکو",
+  "backToCourse": "ڪورس ڏانهن واپس",
+  "finishQuiz": "ڪوئز ختم ڪريو",
+  "nextQuestion": "ايندڙ سوال",
+  "previous": "پويون",
+  "certificates": "سرٽيفڪيٽ",
+  "noCertificatesYet": "اڃا تائين ڪو سرٽيفڪيٽ ناهي",
+  "viewCertificate": "سرٽيفڪيٽ ڏسو",
+  "myProgress": "منهنجي ترقي",
+  "all": "سڀ",
+  "inProgress": "جاري",
+  "completed": "مکمل",
+  "noCoursesStarted": "اڃا تائين ڪو ڪورس شروع ناهي ڪيو ويو",
+  "bookmarkedCoursesTitle": "بڪ مارڪ ڪيل ڪورس",
+  "financialLiteracy": "مالي معلومات",
+  "empowerFinancialKnowledge": "پنهنجي مالي علم سان پاڻ کي بااختيار بڻايو",
+  "keyTopics": "اهم موضوع",
+  "resources": "وسيلا",
+  "startLearning": "سيکڻ شروع ڪريو",
+  "close": "بند ڪريو",
+  "access": "رسائي",
+  "beginnerLevel": "شروعاتي",
+  "intermediateLevel": "درمياني",
+  "advancedLevel": "ماهر",
+  "liveTracking": "لائيو ٽريڪنگ",
+  "trackingDuration": "ٽريڪنگ جو وقت",
+  "fifteenMin": "15 منٽ",
+  "thirtyMin": "30 منٽ",
+  "oneHour": "1 ڪلاڪ",
+  "untilStop": "جيستائين مان بند ڪريان",
+  "liveTrackingActive": "لائيو ٽريڪنگ چالو آهي",
+  "trackingNotActive": "لائيو ٽريڪنگ بند آهي",
+  "stopTracking": "ٽريڪنگ بند ڪريو",
+  "startLiveTracking": "لائيو ٽريڪنگ شروع ڪريو",
+  "trackingStarted": "لائيو ٽريڪنگ شروع ٿي وئي",
+  "trackingStopped": "لائيو ٽريڪنگ بند ٿي وئي",
+  "shakeToAlert": "هلاءِ ڪري اطلاع ڏيو",
+  "sensitivity": "حساسيت",
+  "low": "گھٽ",
+  "medium": "درميانو",
+  "high": "وڌيڪ",
+  "howItWorks": "هي ڪيئن ڪم ڪري ٿو",
+  "fakeCallGenerator": "فيڪ ڪال جنريٽر",
+  "incomingCall": "ڪال اچي رهي آهي",
+  "end": "ختم",
+  "generateFakeCall": "فيڪ ڪال ڪريو",
+  "endCall": "ڪال بند ڪريو",
+  "tips": "ٽپس",
+  "trustedContactsTitle": "ڀروسيمند رابطا",
+  "addTrustedContact": "ڀروسيمند رابطو شامل ڪريو",
+  "name": "نالو",
+  "enterContactName": "نالو درج ڪريو",
+  "phoneNumber": "فون نمبر",
+  "relation": "تعلق",
+  "cancel": "منسوخ",
+  "add": "شامل ڪريو",
+  "contactAddedSuccess": "رابطو شامل ٿي ويو",
+  "deleteContact": "رابطو ختم ڪريو",
+  "delete": "ختم ڪريو",
+  "contactRemoved": "رابطو هٽايو ويو",
+  "noTrustedContacts": "اڃا تائين ڪو ڀروسيمند رابطو ناهي",
+  "contactLabel": "رابطو",
+  "marketplace": "مارڪيٽ پليس",
+  "sellItem": "آئٽم وڪرو ڪريو",
+  "searchProducts": "مصنوعات يا خدمتون ڳوليو...",
+  "noProductsFound": "ڪا به مصنوعات نه ملي",
+  "handmade": "هٿ جو ٺهيل",
+  "clothing": "ڪپڙا",
+  "accessories": "لوازمات",
+  "beauty": "خوبصورتي",
+  "homeDecor": "گهر جي سجاوٽ",
+  "services": "خدمتون",
+  "all": "سڀ",
+  "wellnessHub": "صحت هب",
+  "exploreWellness": "خاص طور تي توهان لاء تيار ڪيل اسان جي صحت جي خاصيتن کي ڏسو",
+  "cycleTracker": "سائيڪل ٽريڪر",
+  "cycleTrackerDesc": "پنهنجي ماهواري چڪر کي ٽريڪ ڪريو، علامتون درج ڪريو، ۽ ذاتي معلومات حاصل ڪريو",
+  "maternityWing": "زچگي ونگ",
+  "maternityWingDesc": "مائرن لاء حمل جي ٽريڪنگ، سنگ ميل، ۽ زچگي کان پوءِ جي مدد",
+  "mentalSanctuary": "ذهني پناهگاهه",
+  "mentalSanctuaryDesc": "توهان جي ذهني سڪون لاء مراقبو، ڊائري لکڻ، ۽ ذهني صحت جا اوزار",
+  "teleHealth": "ٽيلي هيلٿ",
+  "teleHealthDesc": "گھر ويٺي قابل اعتماد زائفن جي ڊاڪٽرن ۽ نفسياتي ماهرن سان رابطو ڪريو",
+  "familyPlanning": "خانداني منصوبابندي",
+  "familyPlanningDesc": "مانع حمل طريقن باري ڄاڻ حاصل ڪريو ۽ باخبر فيصلا ڪريو",
+  "welcomeGreeting": "ڀلي ڪري آيا"
+}
+

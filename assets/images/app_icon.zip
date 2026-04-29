@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, interactive-widget=resizes-content" />
+  <meta name="theme-color" content="#6a3de8" />
+  <meta name="description" content="Quickly generate app icons for Android, iOS, the Web and more." />
+  <link rel="apple-touch-icon" href="/logo192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta property="og:title" content="IconKitchen">
+  <meta property="og:description" content="Cook up app icons for any platform">
+  <meta property="og:image" content="https://icon.kitchen/social-thumb.png">
+  <meta property="og:url" content="https://icon.kitchen">
+  <meta name="twitter:title" content="IconKitchen">
+  <meta name="twitter:description" content="Cook up app icons for any platform">
+  <meta name="twitter:image" content="https://icon.kitchen/social-thumb.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>IconKitchen</title>
+  <script type="module" crossorigin src="/assets/index-ChWtESQA.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-ChkrP9Yp.css">
+<link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+
+<body>
+  <noscript>IconKitchen requires JavaScript enabled to run.</noscript>
+  <div id="root"></div>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6HP98LS7F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+  </script>
+</body>
+
+</html>

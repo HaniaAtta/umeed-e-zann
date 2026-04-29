@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1027292208766",
+    "project_id": "umeed-e--zann",
+    "storage_bucket": "umeed-e--zann.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027292208766:android:1cafff8ea3aa248943c22f",
+        "android_client_info": {
+          "package_name": "com.example.umeed_e_zann"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkiiBDKRtKSTowWytkbSm7LWztK87CPYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

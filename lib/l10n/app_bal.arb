@@ -1,0 +1,272 @@
+{
+  "@@locale": "bal",
+  "appName": "امید زن",
+  "home": "لوج",
+  "welcome": "بہ آمد",
+  "welcomeUser": "بہ آمد، {userName}",
+  "@welcomeUser": {
+    "placeholders": {
+      "userName": {
+        "type": "String"
+      }
+    }
+  },
+  "searchServices": "خدمات، وسائل گوٹ کنت...",
+  "quickAccess": "فوری رسائی",
+  "todaysHighlights": "امروزءِ خاص گپ",
+  "recentMessages": "تازہ پیغام",
+  "noMessagesYet": "ہنو تہ کو پیغام نہ",
+  "startConversation": "کسی سان گپ شروع کنت",
+  "newChat": "نوک چٹ",
+  "viewAll": "ہمہ بینت",
+  "safetyShield": "امنیتی شیلڈ",
+  "wellnessHub": "صحت ہب",
+  "growthAcademy": "ترقی اکیڈمی",
+  "marketplace": "مارکیٹ پلیس",
+  "legalAid": "قانونی مدد",
+  "community": "کمیونٹی",
+  "mentalSanctuary": "ذہنی پناہ گاہ",
+  "cycleTracker": "سائیکل ٹریکر",
+  "maternityWing": "زچگی ونگ",
+  "teleHealth": "ٹیلی ہیلتھ",
+  "familyPlanning": "خاندانی منصوبہ بندی",
+  "howAreYouFeeling": "شما چگونہ احساس کنت؟",
+  "logSymptoms": "علامت درج کنت",
+  "searchDoctors": "ڈاکٹر گوٹ کنت...",
+  "cramps": "درد",
+  "headache": "سر درد",
+  "energetic": "توانا",
+  "bloating": "پھولنت",
+  "save": "محفوظ کنت",
+  "cancel": "منسوخ کنت",
+  "delete": "حذف کنت",
+  "edit": "ترمیم",
+  "add": "شامل کنت",
+  "remove": "ہٹاونت",
+  "submit": "جمع کنت",
+  "loading": "لوڈ بیت...",
+  "error": "غلطی",
+  "success": "کامیابی",
+  "noResultsFound": "کو نتیجہ نہ",
+  "trySearching": "گوٹ کنت: امنیتی، صحت، ترقی، مارکیٹ پلیس، قانونی، یا کمیونٹی",
+  "continueLearning": "سیکھنت جاری کنت",
+  "exploreNewCourses": "نوک کورس و مهارت دریا فت کنت",
+  "safetyReminder": "امنیتی یاد دہانی",
+  "addTrustedContacts": "SOS الرٹس لاءِ قابل اعتماد رابط شامل کنت",
+  "shareLocation": "ہمیشہ قابل اعتماد رابط سان اپنا مقام شیئر کنت",
+  "safetyTip": "امنیتی ٹپ",
+  "upcomingAppointment": "آیندہ اپائنٹمنٹ",
+  "cycleDay": "سائیکل روز {day}",
+  "@cycleDay": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "takeCare": "شما پیریئڈ روز {day} - احتیاط کنت!",
+  "@takeCare": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "fertileWindow": "روز {day} - زرخیز ونڈو نزدیک آیند",
+  "@fertileWindow": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "cycleOnTrack": "روز {day} - شما سائیکل ٹریک تہ",
+  "@cycleOnTrack": {
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "today": "امروز",
+  "tomorrow": "سپاہ",
+  "inDays": "{days} روزان میں",
+  "@inDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "conversations": "{count} گپ",
+  "@conversations": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "conversationsPlural": "{count} گپان",
+  "@conversationsPlural": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "language": "زبان",
+  "profile": "پروفائل",
+  "fullName": "سرجمیں نام",
+  "email": "ای میل",
+  "phone": "فون",
+  "location": "جاہ",
+  "notSet": "سیٹ نہ انت",
+  "profileUpdated": "پروفائل کامبنائی سرا اپ ڈیٹ بوت",
+  "profileUpdateFailed": "پروفائل اپ ڈیٹ نہ بوت",
+  "imageUploaded": "پروفائل تصویر اپ ڈیٹ بوت",
+  "imageUploadFailed": "تصویر اپ لوڈ نہ بوت",
+  "validEmailError": "مہربانی بکن ات یک شریں ای میل ایڈریس درج بکن ات",
+  "pickImageError": "تصویر گچین نہ بوت",
+  "safetyShieldTitle": "تئی حفاظتی شیلڈ",
+  "safetyShieldDesc": "ترا محفوظ دارگءِ واستا زوتیں کارگیری",
+  "quickActions": "پہ زوت کنوکیں کار",
+  "oneTouchSos": "یک ٹچ SOS",
+  "oneTouchSosDesc": "زوت لائیو لوکیشن، آڈیو ریکارڈنگ، و امدادی پیغام راہ بدئے",
+  "liveTracking": "لائیو ٹریکنگ",
+  "liveTrackingDesc": "سنگت و چکّاں وتی لائیو لوکیشن ٹریک کنگءِ اجازت بدئے",
+  "shakeToAlert": "ہلا کر مطلع بکن",
+  "shakeToAlertDesc": "وتی فونءَ ہلا کر چیر و ہم SOS الرٹ راہ بدئے",
+  "fakeCallGenerator": "فیک کال جنریٹر",
+  "fakeCallDesc": "شریں پیمءَ در بوئگءِ واستا یک شریں کالےءِ بہانہ بکن",
+  "manageTrustedContacts": "بھروسہ مند رابطیاں گچین بکن",
+  "manageTrustedContactsDesc": "SOS الرٹس گپت کنوکیں رابطیاں ہور یا در بکن",
+  "documentVault": "دستاویزی والٹ",
+  "uploadDocument": "دستاویز اپ لوڈ بکن",
+  "secureStorageDesc": "قانونی دستاویزاں واستا محفوظیں جاہ",
+  "yourDocuments": "تئی دستاویز",
+  "noDocumentsYet": "انگت ہچ دستاویز نیست",
+  "uploadFirstDoc": "بنگیش کنگءِ واستا وتی اولی دستاویز اپ لوڈ بکن",
+  "filesCount": "{count} فائل",
+  "@filesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "unknownDate": "نا معلوم تریخ",
+  "uploadingDoc": "دستاویز اپ لوڈ بوئگءَ انت...",
+  "docUploadSuccess": "دستاویز کامبنائی سرا اپ لوڈ بوت!",
+  "docUploadFailed": "دستاویز اپ لوڈ نہ بوت",
+  "loginToUpload": "دستاویز اپ لود کنگءِ واستا مہربانی بکن لاگ ان بکن",
+  "sosActivationInfo": "اے وہدءَ چہ بیت وہدے شما SOS چالو کنت؟",
+  "liveLocationShared": "تئی لائیو لوکیشن شئیر بیت",
+  "audioRecordingStarted": "آڈیو ریکارڈنگ وت ب وت شروع بیت",
+  "helpMessageSent": "امدی پیغام تئی بھروسہ مند سنگت و پولیسءَ راہ دئیگ بیت",
+  "tapToActivateSos": "SOS چالو کنگءِ واستا بئے بٹنءَ کلک بکن",
+  "sosCountdownText": "SOS {count} سیکنڈءِ تہ چالو بیت...",
+  "sosAlertSent": "SOS الرٹ راہ دئیگ بوت! تئی بھروسہ مند سنگتاں مطلع بکن بوتگ انت۔",
+  "locationServicesDisabled": "لوکیشن سروس بند انت۔ مہربانی بکن لوکیشن آن بکن۔",
+  "locationPermissionsRequired": "SOS الرٹءِ واستا لوکیشنءِ اجازت لازمی انت۔",
+  "locationPermissionsDeniedForever": "لوکیشنءِ اجازت مکمل بند انت۔ سیٹنگزءَ آن بکن۔",
+  "errorSendingSos": "SOS الرٹ راہ دئیگءَ غلطی",
+  "testAlert": "ٹیسٹ الرٹ",
+  "testAlertSent": "ٹیسٹ الرٹ تئی سنگتاں راہ دئیگ بوت",
+  "shareLocation": "لوکیشن شئیر بکن",
+  "locationShared": "لوکیشن شئیر بوت",
+  "searchDocs": "دستاویز گوٹ بکن...",
+  "searchCourses": "کورس گوٹ بکن...",
+  "allCourses": "سرجمیں کورس",
+  "noCoursesFound": "ہچ کورس نہ ملا",
+  "courseProgress": "کورس ترقی",
+  "videosCount": "{count} ویڈیوز",
+  "courseVideos": "کورس ویڈیوز",
+  "congratulations": "شاباس!",
+  "keepLearning": "سیکھگ جاری دار ات",
+  "backToCourse": "کورسءَ واپس برو",
+  "finishQuiz": "کوئز خلاص بکن",
+  "nextQuestion": "دیمءِ جست",
+  "previous": "پیشی",
+  "certificates": "سرٹیفکیٹ",
+  "noCertificatesYet": "انگت ہچ سرٹیفکیٹ نیست",
+  "viewCertificate": "سرٹیفکیٹ بچار",
+  "myProgress": "منی ترقی",
+  "all": "درست",
+  "inProgress": "جاری",
+  "completed": "خلاص",
+  "noCoursesStarted": "انگت ہچ کورس شروع نہ بوتگ",
+  "bookmarkedCoursesTitle": "بک مارک کورس",
+  "financialLiteracy": "مالی معلومات",
+  "empowerFinancialKnowledge": "وتی مالی زانتءِ واستا وتی وتءَ توانمند بکن",
+  "keyTopics": "خاصیں موضوع",
+  "resources": "وسائل",
+  "startLearning": "سیکھگ شروع بکن",
+  "close": "بند بکن",
+  "access": "رسائی",
+  "beginnerLevel": "بنیادی",
+  "intermediateLevel": "درمیانی",
+  "advancedLevel": "ماہر",
+  "liveTracking": "لائیو ٹریکنگ",
+  "trackingDuration": "ٹریکنگ وہد",
+  "fifteenMin": "15 منٹ",
+  "thirtyMin": "30 منٹ",
+  "oneHour": "1 گھنٹہ",
+  "untilStop": "وہدے کہ من بند بکن",
+  "liveTrackingActive": "لائیو ٹریکنگ چالو انت",
+  "trackingNotActive": "لائیو ٹریکنگ بند انت",
+  "stopTracking": "ٹریکنگ بند بکن",
+  "startLiveTracking": "لائیو ٹریکنگ شروع بکن",
+  "trackingStarted": "لائیو ٹریکنگ شروع بوت",
+  "trackingStopped": "لائیو ٹریکنگ بند بوت",
+  "shakeToAlert": "ہلا کر مطلع بکن",
+  "sensitivity": "حساسیت",
+  "low": "کم",
+  "medium": "درمیانہ",
+  "high": "زیادہ",
+  "howItWorks": "اے چوں کار کنت",
+  "fakeCallGenerator": "فیک کال جنریٹر",
+  "incomingCall": "کال پیداک انت",
+  "end": "خلاص",
+  "generateFakeCall": "فیک کال بکن",
+  "endCall": "کال بند بکن",
+  "tips": "ٹپس",
+  "trustedContactsTitle": "بھروسہ مند رابطے",
+  "addTrustedContact": "بھروسہ مند رابطہ ہور بکن",
+  "name": "نام",
+  "enterContactName": "رابطہ نام درج بکن",
+  "phoneNumber": "فون نمبر",
+  "relation": "تعلق",
+  "cancel": "منسوخ",
+  "add": "ہور بکن",
+  "contactAddedSuccess": "رابطہ ہور بوت",
+  "deleteContact": "رابطہ حذف بکن",
+  "delete": "حذف",
+  "contactRemoved": "رابطہ ہٹاک بوت",
+  "noTrustedContacts": "انگت ہچ بھروسہ مند رابطہ نیست",
+  "contactLabel": "رابطہ",
+  "marketplace": "مارکیٹ پلیس",
+  "sellItem": "آئٹم فروخت بکن",
+  "searchProducts": "مصنوعات یا خدمات لوٹ بکن...",
+  "noProductsFound": "بز ہچ کجھ نہ ملا",
+  "handmade": "دستءِ جوڑ بوتگیں",
+  "clothing": "گد و پوشاک",
+  "accessories": "لوازمات",
+  "beauty": "خوبصورتی",
+  "homeDecor": "گھرءِ سجاوٹ",
+  "services": "خدمات",
+  "all": "ہمہ",
+  "wellnessHub": "صحت ہب",
+  "exploreWellness": "خاص تئی واستا جوڑ بوتگیں صحتءِ کاررمدیں چیزاں بچار",
+  "cycleTracker": "سائیکل ٹریکر",
+  "cycleTrackerDesc": "وتی ماہواریءِ چکرءَ ٹریک بکن، علاماتاں درج بکن و خاصیں معلومات بزور",
+  "maternityWing": "زچگی ونگ",
+  "maternityWingDesc": "ماتانی واستا حملءِ ٹریکنگ، سنگ میل و زچگیءِ پدءِ کمک",
+  "mentalSanctuary": "ذہنی پناہ گاہ",
+  "mentalSanctuaryDesc": "تئی ذہنی سکونءِ واستا مراقبہ، ڈائری لکھگ و ذہنی صحتءِ ٹولز",
+  "teleHealth": "ٹیلی ہیلتھ",
+  "teleHealthDesc": "گھرءَ نشتگیں ڈاکٹر و ماہر نفسیاتءَ گوما رابطہ بکن",
+  "familyPlanning": "خاندانی منصوبہ بندی",
+  "familyPlanningDesc": "بچہ دار نہ بوئگءِ طریقاءِ بارہءَ زانت حاصل بکن و فیصلہ بکن",
+  "welcomeGreeting": "بہ آمد"
+}
+

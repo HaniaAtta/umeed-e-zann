@@ -1,0 +1,702 @@
+import 'package:flutter/material.dart';
+import '../../../../contents/colors.dart';
+import '../../../../contents/textstyles.dart';
+import '../../../../core/widgets/custom_appbar.dart';
+import '../../../../extensions/extensions.dart';
+import '../../../../widgets/side_drawer.dart';
+
+/// Premium Maternity Wing Screen
+/// Split into Pregnancy and Post-Partum modes
+class MaternityWingScreen extends StatefulWidget {
+  const MaternityWingScreen({super.key});
+
+  @override
+  State<MaternityWingScreen> createState() => _MaternityWingScreenState();
+}
+
+class _MaternityWingScreenState extends State<MaternityWingScreen> {
+  int currentWeek = 24; // Example: 24 weeks pregnant
+  bool isPregnancyMode = true;
+  double ppdScore = 5; // slider 0-10
+
+  final List<Map<String, dynamic>> milestones = [
+    {'week': 12, 'title': 'First Trimester Complete', 'description': 'Baby is fully formed'},
+    {'week': 20, 'title': 'Halfway There!', 'description': 'Anatomy scan completed'},
+    {'week': 28, 'title': 'Third Trimester Begins', 'description': 'Baby can open eyes'},
+    {'week': 36, 'title': 'Almost There!', 'description': 'Baby is full-term'},
+  ];
+
+  final List<Map<String, String>> babySizes = [
+    {'week': '12', 'label': 'Size of a Lime'},
+    {'week': '16', 'label': 'Size of an Avocado'},
+    {'week': '20', 'label': 'Size of a Mango'},
+    {'week': '24', 'label': 'Size of a Corn Ear'},
+    {'week': '28', 'label': 'Size of a Eggplant'},
+    {'week': '32', 'label': 'Size of a Squash'},
+    {'week': '36', 'label': 'Size of a Papaya'},
+  ];
+
+  String get currentBabySize {
+    // Find closest week below or equal
+    final int week = currentWeek;
+    String label = 'Growing strong';
+    for (final item in babySizes.reversed) {
+      final w = int.tryParse(item['week'] ?? '0') ?? 0;
+      if (week >= w) {
+        label = item['label'] ?? label;
+        break;
+      }
+    }
+    return label;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      drawer: const SideDrawer(currentModule: 'wellness'),
+      appBar: const CustomAppBar(
+        title: 'Maternity Wing',
+        showLogo: true,
+        showBackButton: true,
+      ),
+      body: CustomScrollView(
+        physics: const BouncingScrollPhysics(),
+        slivers: [
+          SliverToBoxAdapter(
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xFFB8A8D4), // Light cool purple
+                    Color(0xFFA891C8), // Medium cool purple
+                    Color(0xFF9A7FBD), // Slightly deeper cool purple
+                  ],
+                ),
+              ),
+              padding: EdgeInsets.all(context.responsive(16)),
+              child: Column(
+                children: [
+                  SizedBox(height: context.responsive(20)),
+                  Container(
+                    padding: EdgeInsets.all(context.responsive(20)),
+                    decoration: BoxDecoration(
+                      color: AppColors.white.withValues(alpha: 0.2),
+                      borderRadius: BorderRadius.circular(context.responsive(20)),
+                    ),
+                    child: Icon(
+                      isPregnancyMode ? Icons.pregnant_woman_rounded : Icons.baby_changing_station_rounded,
+                      size: context.responsive(60),
+                      color: AppColors.white,
+                    ),
+                  ),
+                  SizedBox(height: context.responsive(16)),
+                ],
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Container(
+              decoration: BoxDecoration(
+                color: AppColors.background,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(context.responsive(30)),
+                  topRight: Radius.circular(context.responsive(30)),
+                ),
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(context.responsive(16)),
+                child: Column(
+                  children: [
+                    // Mode Toggle
+                    Container(
+                      decoration: BoxDecoration(
+                        color: AppColors.surface,
+                        borderRadius: BorderRadius.circular(context.responsive(12)),
+                      ),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  isPregnancyMode = true;
+                                });
+                              },
+                              child: Container(
+                                padding: EdgeInsets.all(context.responsive(12)),
+                                decoration: BoxDecoration(
+                                  color: isPregnancyMode ? AppColors.mediumPurple : Colors.transparent,
+                                  borderRadius: BorderRadius.circular(context.responsive(12)),
+                                ),
+                                child: Text(
+                                  'Pregnancy',
+                                  textAlign: TextAlign.center,
+                                  style: AppTextStyles.bodyMedium1(context).copyWith(
+                                    color: isPregnancyMode ? AppColors.white : AppColors.primaryText,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: GestureDetector(
+                              onTap: () {
+                                setState(() {
+                                  isPregnancyMode = false;
+                                });
+                              },
+                              child: Container(
+                                padding: EdgeInsets.all(context.responsive(12)),
+                                decoration: BoxDecoration(
+                                  color: !isPregnancyMode ? AppColors.mediumPurple : Colors.transparent,
+                                  borderRadius: BorderRadius.circular(context.responsive(12)),
+                                ),
+                                child: Text(
+                                  'Post-Partum',
+                                  textAlign: TextAlign.center,
+                                  style: AppTextStyles.bodyMedium1(context).copyWith(
+                                    color: !isPregnancyMode ? AppColors.white : AppColors.primaryText,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: context.responsive(20)),
+                    // Content based on mode
+                    if (isPregnancyMode) ...[
+                      // Pregnancy content
+                      Container(
+                        padding: EdgeInsets.all(context.responsive(16)),
+                        decoration: BoxDecoration(
+                          color: AppColors.surface,
+                          borderRadius: BorderRadius.circular(context.responsive(16)),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Current Week: $currentWeek',
+                              style: AppTextStyles.heading3(context),
+                            ),
+                            SizedBox(height: context.responsive(8)),
+                            Text(
+                              currentBabySize,
+                              style: AppTextStyles.bodyMedium1(context).copyWith(
+                                color: AppColors.mediumPurple,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ] else ...[
+                      // Post-partum content
+                      Container(
+                        padding: EdgeInsets.all(context.responsive(16)),
+                        decoration: BoxDecoration(
+                          color: AppColors.surface,
+                          borderRadius: BorderRadius.circular(context.responsive(16)),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Post-Partum Depression Screening',
+                              style: AppTextStyles.heading3(context),
+                            ),
+                            SizedBox(height: context.responsive(16)),
+                            Text(
+                              'Score: ${ppdScore.toInt()}/10',
+                              style: AppTextStyles.bodyMedium1(context),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+            ),
+          ),
+    return Container(
+      padding: EdgeInsets.all(responsive.spacingL),
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(responsive.radiusL),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.primaryDark.withValues(alpha: 0.08),
+            blurRadius: responsive.spacingL,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: EdgeInsets.all(responsive.spacingM),
+                decoration: BoxDecoration(
+                  color: AppColors.palePink.withValues(alpha: 0.2),
+                  borderRadius: BorderRadius.circular(responsive.radiusM),
+                ),
+                child: Icon(
+                  Icons.info_outline_rounded,
+                  color: AppColors.dustyPink,
+                  size: responsive.iconSize(24),
+                ),
+              ),
+              SizedBox(width: responsive.spacingM),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Week $currentWeek Update',
+                      style: AppTextStyles.headingSmall().copyWith(
+                        fontSize: responsive.fontSize(18),
+                      ),
+                    ),
+                    Text(
+                      'Second Trimester',
+                      style: AppTextStyles.bodySmall().copyWith(
+                        fontSize: responsive.fontSize(13),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: responsive.spacingM),
+          Text(
+            'Your baby is growing rapidly! At $currentWeek weeks, your baby can hear sounds from outside the womb.',
+            style: AppTextStyles.bodyMedium().copyWith(
+              fontSize: responsive.fontSize(14),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildBabySizeVisualizer(Responsive responsive) {
+    return Container(
+      margin: EdgeInsets.only(top: responsive.spacingM),
+      padding: EdgeInsets.all(responsive.spacingL),
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(responsive.radiusL),
+        border: Border.all(
+          color: AppColors.softPink.withValues(alpha: 0.3),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.primaryDark.withValues(alpha: 0.05),
+            blurRadius: responsive.spacingM,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: responsive.size(60),
+            height: responsive.size(60),
+            decoration: BoxDecoration(
+              color: AppColors.palePink.withValues(alpha: 0.3),
+              shape: BoxShape.circle,
+            ),
+            child: Icon(
+              Icons.eco_rounded,
+              color: AppColors.secondaryPurple,
+              size: responsive.iconSize(30),
+            ),
+          ),
+          SizedBox(width: responsive.spacingM),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Baby Size Visualizer',
+                  style: AppTextStyles.bodyLarge(
+                    color: AppColors.primaryDark,
+                  ).copyWith(
+                    fontSize: responsive.fontSize(16),
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                SizedBox(height: responsive.spacingXS),
+                Text(
+                  'Week $currentWeek: $currentBabySize',
+                  style: AppTextStyles.bodySmall(
+                    color: AppColors.primaryDark.withValues(alpha: 0.7),
+                  ).copyWith(
+                    fontSize: responsive.fontSize(13),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildMilestones(Responsive responsive) {
+    return Column(
+      children: milestones.map((milestone) {
+        final isCompleted = milestone['week'] <= currentWeek;
+        return Container(
+          margin: EdgeInsets.only(bottom: responsive.spacingM),
+          padding: EdgeInsets.all(responsive.spacingL),
+          decoration: BoxDecoration(
+            color: AppColors.white,
+            borderRadius: BorderRadius.circular(responsive.radiusL),
+            border: Border.all(
+              color: isCompleted
+                  ? AppColors.dustyPink
+                  : AppColors.lightGrey,
+              width: isCompleted ? 2 : 1,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: AppColors.primaryDark.withValues(alpha: 0.05),
+                blurRadius: responsive.spacingM,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          child: Row(
+            children: [
+              Container(
+                width: responsive.size(48),
+                height: responsive.size(48),
+                decoration: BoxDecoration(
+                  color: isCompleted
+                      ? AppColors.dustyPink
+                      : AppColors.lightGrey,
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(
+                  isCompleted ? Icons.check_rounded : Icons.circle_outlined,
+                  color: AppColors.white,
+                  size: responsive.iconSize(24),
+                ),
+              ),
+              SizedBox(width: responsive.spacingM),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      milestone['title'],
+                      style: AppTextStyles.bodyLarge(
+                        weight: FontWeight.w600,
+                      ).copyWith(
+                        fontSize: responsive.fontSize(15),
+                      ),
+                    ),
+                    Text(
+                      'Week ${milestone['week']} • ${milestone['description']}',
+                      style: AppTextStyles.bodySmall().copyWith(
+                        fontSize: responsive.fontSize(13),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        );
+      }).toList(),
+    );
+  }
+
+  Widget _buildQuickActions(Responsive responsive) {
+    final List<Map<String, dynamic>> cards = [
+      {
+        'title': 'Manage Appointments',
+        'icon': Icons.calendar_today_rounded,
+        'color': AppColors.accentPurple,
+        'body':
+            'View upcoming visits, reschedule, and set reminders. Keep your care team aligned.',
+        'cta': 'Open Appointments'
+      },
+      {
+        'title': 'Pregnancy Foods',
+        'icon': Icons.restaurant_rounded,
+        'color': AppColors.dustyPink,
+        'body':
+            'Add leafy greens, lean protein, whole grains. Avoid high-mercury fish, unpasteurized cheese.',
+        'cta': 'View Food Guide'
+      },
+      {
+        'title': 'Health Tips',
+        'icon': Icons.favorite_rounded,
+        'color': AppColors.softPink,
+        'body':
+            'Hydrate well, sleep 7-9 hours, take prenatal vitamins, and listen to your body.',
+        'cta': 'See Daily Tips'
+      },
+      {
+        'title': 'Exercises',
+        'icon': Icons.fitness_center_rounded,
+        'color': AppColors.secondaryPurple,
+        'body':
+            'Try prenatal yoga, walking, and light strength. Avoid high impact without clearance.',
+        'cta': 'Start a Routine'
+      },
+    ];
+
+    return Column(
+      children: cards
+          .map(
+            (card) => Container(
+              margin: EdgeInsets.only(bottom: responsive.spacingL),
+              padding: EdgeInsets.all(responsive.spacingL),
+              decoration: BoxDecoration(
+                color: AppColors.white,
+                borderRadius: BorderRadius.circular(responsive.radiusL),
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.primaryDark.withValues(alpha: 0.08),
+                    blurRadius: responsive.spacingM,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(responsive.spacingM),
+                        decoration: BoxDecoration(
+                          color: (card['color'] as Color).withValues(alpha: 0.15),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          card['icon'] as IconData,
+                          color: card['color'] as Color,
+                          size: responsive.iconSize(26),
+                        ),
+                      ),
+                      SizedBox(width: responsive.spacingM),
+                      Expanded(
+                        child: Text(
+                          card['title'] as String,
+                          style: AppTextStyles.bodyLarge(
+                            color: AppColors.primaryDark,
+                          ).copyWith(
+                            fontSize: responsive.fontSize(16),
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: responsive.spacingS),
+                  Text(
+                    card['body'] as String,
+                    style: AppTextStyles.bodyMedium(
+                      color: AppColors.primaryDark,
+                    ).copyWith(
+                      fontSize: responsive.fontSize(14),
+                      height: 1.5,
+                    ),
+                  ),
+                  SizedBox(height: responsive.spacingM),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: TextButton(
+                      onPressed: () {
+                        // Handle CTA
+                      },
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: responsive.spacingM,
+                          vertical: responsive.spacingS,
+                        ),
+                      ),
+                      child: Text(
+                        card['cta'] as String,
+                        style: AppTextStyles.bodyMedium(
+                          color: card['color'] as Color,
+                        ).copyWith(
+                          fontSize: responsive.fontSize(14),
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
+          .toList(),
+    );
+  }
+
+  Widget _buildPPDScreener(Responsive responsive) {
+    return Container(
+      padding: EdgeInsets.all(responsive.spacingXL),
+      decoration: BoxDecoration(
+        color: AppColors.white,
+        borderRadius: BorderRadius.circular(responsive.radiusXL),
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.primaryDark.withValues(alpha: 0.08),
+            blurRadius: responsive.spacingL,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'How are you feeling emotionally today?',
+            style: AppTextStyles.headingSmall(
+              color: AppColors.primaryDark,
+            ).copyWith(
+              fontSize: responsive.fontSize(18),
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          SizedBox(height: responsive.spacingS),
+          Text(
+            'Edinburgh Postnatal Depression Scale (quick check)',
+            style: AppTextStyles.bodySmall(
+              color: AppColors.primaryDark.withValues(alpha: 0.7),
+            ).copyWith(
+              fontSize: responsive.fontSize(13),
+            ),
+          ),
+          SizedBox(height: responsive.spacingXL),
+
+          // Slider
+          Slider(
+            value: ppdScore,
+            min: 0,
+            max: 10,
+            divisions: 10,
+            activeColor: AppColors.secondaryPurple,
+            inactiveColor: AppColors.secondaryPurple.withValues(alpha: 0.2),
+            label: ppdScore.toStringAsFixed(0),
+            onChanged: (value) {
+              setState(() {
+                ppdScore = value;
+              });
+            },
+          ),
+          SizedBox(height: responsive.spacingS),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Low',
+                style: AppTextStyles.bodySmall(
+                  color: AppColors.primaryDark.withValues(alpha: 0.7),
+                ).copyWith(fontSize: responsive.fontSize(12)),
+              ),
+              Text(
+                'High',
+                style: AppTextStyles.bodySmall(
+                  color: AppColors.primaryDark.withValues(alpha: 0.7),
+                ).copyWith(fontSize: responsive.fontSize(12)),
+              ),
+            ],
+          ),
+
+          SizedBox(height: responsive.spacingXL),
+
+          // Emoji quick select
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              _emojiChip(responsive, '😊', 'Good'),
+              _emojiChip(responsive, '😐', 'Okay'),
+              _emojiChip(responsive, '😢', 'Low'),
+            ],
+          ),
+
+          SizedBox(height: responsive.spacingXL),
+
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Thank you. Your feeling has been noted.'),
+                    backgroundColor: AppColors.primaryDark,
+                    duration: const Duration(seconds: 2),
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppColors.primaryDark,
+                foregroundColor: AppColors.white,
+                padding: EdgeInsets.symmetric(
+                  vertical: responsive.spacingL,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(responsive.radiusL),
+                ),
+                elevation: 2,
+              ),
+              child: Text(
+                'Log Feeling',
+                style: AppTextStyles.buttonText(
+                  color: AppColors.white,
+                ).copyWith(
+                  fontSize: responsive.fontSize(16),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _emojiChip(Responsive responsive, String emoji, String label) {
+    return Column(
+      children: [
+        Container(
+          padding: EdgeInsets.all(responsive.spacingM),
+          decoration: BoxDecoration(
+            color: AppColors.palePink.withValues(alpha: 0.2),
+            shape: BoxShape.circle,
+          ),
+          child: Text(
+            emoji,
+            style: TextStyle(fontSize: responsive.fontSize(20)),
+          ),
+        ),
+        SizedBox(height: responsive.spacingS),
+        Text(
+          label,
+          style: AppTextStyles.bodySmall(
+            color: AppColors.primaryDark,
+          ).copyWith(
+            fontSize: responsive.fontSize(12),
+          ),
+        ),
+      ],
+    );
+  }
+}
